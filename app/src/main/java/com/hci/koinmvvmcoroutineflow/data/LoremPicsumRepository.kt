@@ -1,5 +1,8 @@
 package com.hci.koinmvvmcoroutineflow.data
 
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.PagingData
 import com.google.gson.Gson
 import com.hci.koinmvvmcoroutineflow.api.LoremPicsumApiService
 import com.hci.koinmvvmcoroutineflow.api.ResImageInfo
@@ -24,5 +27,12 @@ class LoremPicsumRepository(private val service: LoremPicsumApiService) {
         } else {
             throw RuntimeException("response is Failed.")
         }
+    }
+
+    fun fetchImageList(): Flow<PagingData<ImageInfo>> {
+        return Pager(
+            config = PagingConfig(pageSize = 20, enablePlaceholders = false),
+            pagingSourceFactory = { LoremPicsumDataSource(service = service) }
+        ).flow
     }
 }
