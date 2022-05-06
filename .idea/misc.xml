@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Juyonghan/Andriod/AndriodStudioProjects/KoinMVVMCoroutineFlow/app/src/main/res/layout/activity_lorempicsum_detail.xml" value="0.1" />
+        <entry key="..\:/Juyonghan/Andriod/AndriodStudioProjects/KoinMVVMCoroutineFlow/app/src/main/res/layout/activity_lorempicsum_list.xml" value="0.1" />
+        <entry key="..\:/Juyonghan/Andriod/AndriodStudioProjects/KoinMVVMCoroutineFlow/app/src/main/res/layout/item_image.xml" value="0.1" />
       </map>
     </option>
   </component>
