@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.hci.koinmvvmcoroutineflow.ui.loremPicsum.LoremPicsumViewModel" />
+            type="com.hci.koinmvvmcoroutineflow.ui.LoremPicsumViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
