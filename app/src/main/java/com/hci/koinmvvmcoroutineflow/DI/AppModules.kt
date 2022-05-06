@@ -3,7 +3,7 @@ package com.hci.koinmvvmcoroutineflow.DI
 import com.google.gson.GsonBuilder
 import com.hci.koinmvvmcoroutineflow.api.LoremPicsumApiService
 import com.hci.koinmvvmcoroutineflow.data.LoremPicsumRepository
-import com.hci.koinmvvmcoroutineflow.ui.loremPicsum.LoremPicsumViewModel
+import com.hci.koinmvvmcoroutineflow.ui.LoremPicsumViewModel
 import okhttp3.OkHttpClient
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.qualifier.named
@@ -19,6 +19,7 @@ class ApiConstants {
 }
 
 object AppModules {
+
     private val repositories = module {
         factory { LoremPicsumRepository(service = get(named(ApiConstants.API_LOREM_PICSUM))) }
     }
@@ -34,6 +35,7 @@ object AppModules {
                 .setPrettyPrinting()
                 .create()
         }
+
         single(named(ApiConstants.API_LOREM_PICSUM)) {
             Retrofit.Builder()
                 .client(OkHttpClient.Builder().run {
