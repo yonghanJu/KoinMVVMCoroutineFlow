@@ -20,7 +20,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             android:scaleType="centerCrop"
-            app:url="@{item.thumbnail_url}"/>
+            app:url="@{item.image_url}"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="0dp"
