@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hci.koinmvvmcoroutineflow.databinding.ItemImageBinding
 import com.hci.koinmvvmcoroutineflow.model.ImageInfo
 
-class LoremPicsumListAdapter:
+class LoremPicsumListAdapter :
     PagingDataAdapter<ImageInfo, LoremPicsumListAdapter.ImageViewHolder>(
         object : DiffUtil.ItemCallback<ImageInfo>() {
             override fun areItemsTheSame(oldItem: ImageInfo, newItem: ImageInfo): Boolean {
@@ -21,16 +21,14 @@ class LoremPicsumListAdapter:
 
         }
     ) {
-
-
-    interface OnItemClickListener{
-        fun onItemClick(item:ImageInfo)
+    interface OnItemClickListener {
+        fun onItemClick(item: ImageInfo)
     }
 
-    var onItemClickListener:OnItemClickListener? = null
+    var onItemClickListener: OnItemClickListener? = null
 
     override fun onBindViewHolder(holder: LoremPicsumListAdapter.ImageViewHolder, position: Int) {
-        val item = getItem(position)?: return
+        val item = getItem(position) ?: return
         holder.onBind(item)
     }
 
@@ -38,12 +36,14 @@ class LoremPicsumListAdapter:
         parent: ViewGroup,
         viewType: Int
     ): LoremPicsumListAdapter.ImageViewHolder {
-        return ImageViewHolder(binding = ItemImageBinding.inflate(
-            LayoutInflater.from(parent.context), parent, false)
+        return ImageViewHolder(
+            binding = ItemImageBinding.inflate(
+                LayoutInflater.from(parent.context), parent, false
+            )
         )
     }
 
-    inner class ImageViewHolder(private val binding: ItemImageBinding):
+    inner class ImageViewHolder(private val binding: ItemImageBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(item: ImageInfo) {
             binding.item = item
