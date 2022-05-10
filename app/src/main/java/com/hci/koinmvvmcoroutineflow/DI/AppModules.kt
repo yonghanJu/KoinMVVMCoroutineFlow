@@ -1,4 +1,4 @@
-package com.hci.koinmvvmcoroutineflow.DI
+package com.hci.koinmvvmcoroutineflow.di
 
 import com.google.gson.GsonBuilder
 import com.hci.koinmvvmcoroutineflow.api.LoremPicsumApiService
