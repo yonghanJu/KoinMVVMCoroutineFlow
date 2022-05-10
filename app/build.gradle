@@ -53,7 +53,7 @@ dependencies {
 
     //mockito
     testImplementation "org.mockito.kotlin:mockito-kotlin:4.0.0"
-    
+
 
     // retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
@@ -66,7 +66,8 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
 
     // coroutines
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0")
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1'
 
     // Glide
     implementation 'com.github.bumptech.glide:glide:4.13.0'
